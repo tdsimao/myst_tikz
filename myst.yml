@@ -1,0 +1,11 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: a951dca9-34a1-4405-ab8b-229aa58afd4a
+  toc:
+    - file: README.md
+  plugins:
+    - type: executable
+      path: src/myst_tikz/myst_tikz.py
+site:
+  template: book-theme
