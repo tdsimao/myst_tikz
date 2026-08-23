@@ -44,7 +44,7 @@ DOC_BODY = r"""
 def generate_latex(tikz_source, libraries="", preamble=""):
     """Generate a standalone LaTeX document containing TikZ source."""
     tikz = tikz_source.replace("\r\n", "\n")
-    if not tikz.lstrip().startswith("\\begin{tikz"):
+    if "\\begin{tikzpicture}" not in tikz:
         tikz = "\\begin{tikzpicture}\n" + tikz + "\n\\end{tikzpicture}"
 
     return DOC_HEAD % libraries + preamble + DOC_BODY % tikz
